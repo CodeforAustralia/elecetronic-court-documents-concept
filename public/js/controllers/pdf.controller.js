@@ -10,6 +10,7 @@
 
     // $scope.pdfUrl = "/pdfs/sample-1.pdf";
     $scope.pdfUrl = "/pdfs/sample-combined.pdf";
+    $scope.loading = 'loading your document...';
 
     function init(){
       $log.log("Loaded the pdf controller");
