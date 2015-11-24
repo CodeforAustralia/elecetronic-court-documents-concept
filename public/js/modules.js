@@ -3,6 +3,7 @@
 angular.module('njcEfvApp', [
   'ui.router',
   'pdf',
+  'angular-spinkit',
   'ngResource',
   'ngSanitize',
   'ngAnimate',
