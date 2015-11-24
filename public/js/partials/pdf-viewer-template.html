@@ -1,0 +1,20 @@
+<section id="pdf-viewer">
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-default" ng-click="goPrevious()"><span class="fa fa-chevron-left"></span>&nbsp;Prev Page</span></button>
+      <button class="btn btn-default" ng-click="goNext()"><span class="fa fa-chevron-right"></span>&nbsp;Next page</span></button>
+      &nbsp;|&nbsp;
+      <button class="btn btn-default" ng-click="zoomIn()">+</span></button>
+      <button class="btn btn-default" ng-click="fit()">100%</span></button>
+      <button class="btn btn-default" ng-click="zoomOut()">-</span></button>
+      &nbsp;|&nbsp;
+      <button class="btn btn-default" ng-click="print()"><span class="fa fa-print"></span>&nbsp;Print</span></button>
+      <button class="btn btn-default" ng-click="email()"><span class="fa fa-envelope"></span>&nbsp;Email</span></button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <canvas id="pdf-canvas"></canvas>
+    </div>
+  </div>
+</section>

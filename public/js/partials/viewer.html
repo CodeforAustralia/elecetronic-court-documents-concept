@@ -1,0 +1,13 @@
+<section id="viewer">
+  <header class="row">
+    <h1>Online FVIO for {{ vm.username }}</h1>
+  </header>
+  <main class="row">
+    <div class="wrapper" ng-controller="PDFController">
+      <ng-pdf template-url="/js/partials/pdf-viewer-template.html" scale="page-fit"></ng-pdf>
+    </div>
+  </main>
+  <footer class="row">
+    <p><small>Code For Australia</small></p>
+  </footer>
+</section>
