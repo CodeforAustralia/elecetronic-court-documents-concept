@@ -43,16 +43,14 @@
           <button type="button" class="btn" name="button"><span class="fa fa-print"></span>&nbsp;Print</button>
           <button type="button" class="btn" name="button"><span class="fa fa-download"></span>&nbsp;PDF</button>
           <button type="button" class="btn" name="button"><span class="fa fa-table"></span>&nbsp;Excel</button>
+          <button ui-sref="sms-order({id: vm.order.id})" type="button" class="btn" name="button"><span class="fa fa-mobile"></span>&nbsp;Send by SMS</button>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-xs-6">
-        <p>
-          <a href="#">Bloggs, Joe</a>
-          <br/>22 Fake st
-          <br/>Faketown Hill, 3000
-        </p>
+        <p><a href="#">{{ vm.order.name }}</a></p>
+        <p ng-bind-html="vm.order.address"></p>
       </div>
       <div class="col-xs-6">
         <h3>Notifications</h3>

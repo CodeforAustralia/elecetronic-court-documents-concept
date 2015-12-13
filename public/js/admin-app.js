@@ -36,7 +36,16 @@
 
       }
   	})
-    .state('view-order', { // state for showing all movies
+    .state('sms-order', { // state for sending an sms to the client
+  		url: '/sms-order/:id',
+  		templateUrl: 'js/partials/sms-order.html',
+  		controller: 'SmsOrderController',
+      controllerAs: 'vm',
+      resolve: {
+
+      }
+  	})
+    .state('view-order', { // state for viewing the order
   		url: '/view-order/:id',
   		templateUrl: 'js/partials/view-order.html',
   		controller: 'ViewOrderController',
