@@ -39,7 +39,12 @@
         </div>
         <div class="row">
           <h4>{{ vm.order.name }}</h4>
+        </div>
+        <div class="row">
           <p ng-bind-html="vm.order.address"></p>
+        </div>
+        <div class="row">
+          <p>{{ vm.order.phone }} - <a href="">edit</a></p>
         </div>
         <div class="row">
           <button type="button" class="btn btn-primary" name="button">
