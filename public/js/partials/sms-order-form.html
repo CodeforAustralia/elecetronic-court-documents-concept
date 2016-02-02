@@ -35,9 +35,6 @@
       </div>
       <div class="col-xs-6">
         <div class="row">
-          <h3>Send by SMS</h3>
-        </div>
-        <div class="row">
           <h4>{{ vm.order.name }}</h4>
         </div>
         <div class="row">
@@ -46,13 +43,23 @@
         <div class="row">
           <p ng-bind-html="vm.order.address"></p>
         </div>
-        <div class="row">
-          <p>{{ vm.order.phone }} - <a href="">edit</a></p>
-        </div>
-        <div class="row">
-          <button type="button" class="btn btn-primary" name="button" ui-sref="sms-order-form({id: vm.order.id})">
-            <span class="fa fa-send"></span>&nbsp;Send link via SMS
-          </button>
+        <form id="form_id" action="index.html" method="post" class="form" ng-show="!vm.sent">
+          <div class="row">
+            <label class="form-label">Phone number</label>
+            <input class="form-control" type="text" ng-model="vm.number"/>
+          </div>
+          <div class="row form-group">
+            <label class="form-label">SMS Message</label>
+            <textarea class="form-control" ng-model="vm.message" rows="8" cols="40"></textarea>
+          </div>
+          <div class="row">
+            <button type="button" ng-click="vm.send()" class="btn btn-primary" name="button">
+              <span class="fa fa-send"></span>&nbsp;Send SMS
+            </button>
+          </div>
+        </form>
+        <div class="row" ng-show="vm.sent">
+          <p class="alert alert-success">Great! Sms sent</p>
         </div>
       </div>
     </div>

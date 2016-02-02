@@ -15,6 +15,7 @@ tests/_output/*
 # Configuration
 /app/config/local
 .env.local.php
+env.json
 
 # Composer
 composer.phar
