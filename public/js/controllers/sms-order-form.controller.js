@@ -15,7 +15,7 @@
 
     vm.order = DataSource.find($stateParams.id);
     vm.number = "+61424634699";
-    vm.message = "Hi "+ vm.order.name +", here is a link to your online intervention order for case: "+ vm.order.id +". http://njc-efv.herokuapp.com/#/1a3e62fd271. \nSent from the Neighbourhood Justice Centre";
+    vm.message = "Hi "+ vm.order.name +", here is a link to your online intervention order for case: #"+ vm.order.id +". http://njc-efv.herokuapp.com/#/1a3e62fd271. \nSent from the Neighbourhood Justice Centre";
     vm.sent = false;
 
     vm.send = function(){
