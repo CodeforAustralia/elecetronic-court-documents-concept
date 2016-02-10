@@ -36,6 +36,15 @@
 
       }
   	})
+    .state('doc', { // state for showing all movies
+  		url: '/doc/:id',
+  		templateUrl: 'js/partials/login.html',
+  		controller: 'LoginController',
+      controllerAs: 'vm',
+      resolve: {
+
+      }
+  	})
     .state('viewer', { // state for showing all movies
   		url: '/viewer',
   		templateUrl: 'js/partials/viewer.html',
