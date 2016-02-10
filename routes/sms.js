@@ -1,9 +1,15 @@
 var express = require('express');
 var router = express.Router();
 
-var common = require('./common');
-//var config = (process.env.NODE_ENV == "development") ? common.config() : process.env;
-var config = common.config();
+var config = {};
+if (process.env.NODE_ENV === 'development'){
+  var common = require('./common');
+  //config = (process.env.NODE_ENV == "development") ? common.config() : process.env;
+  config = common.config();
+}
+else {
+  config = process.env;
+}
 
 /* GET home page. */
 router.post('/', function(req, res, next) {
