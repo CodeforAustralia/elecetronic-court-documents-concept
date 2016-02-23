@@ -10,7 +10,7 @@
 
     var vm = this;
 
-    vm.username = !_.isUndefined($rootScope.user) ? $rootScope.user.name : "Guest";
+    vm.username = (!_.isUndefined($rootScope.user) &&  !_.isUndefined($rootScope.user)) ? $rootScope.user.name : "Applicant Nine";
 
     function init(){
       $log.log("Loaded the viewer controller");
